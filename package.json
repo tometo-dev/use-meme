@@ -1,7 +1,8 @@
 {
-  "name": "use-meme",
+  "name": "react-use-meme",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
