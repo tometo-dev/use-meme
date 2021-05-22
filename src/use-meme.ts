@@ -23,15 +23,15 @@ type TMultipleMemes = {
 type TMemeResponse = TMeme | TMultipleMemes
 type TStatus = "fetching" | "success" | "failure" | "undefined"
 
-type TState<TResponse> = {
+type TMemeResult<TResponse> = {
   status: TStatus
   meme: TResponse
   error: any
 }
 
-function useMeme(): TState<TMeme>
-function useMeme({ subreddit }: { subreddit: string }): TState<TMeme>
-function useMeme({ count }: { count: number }): TState<TMultipleMemes>
+function useMeme(): TMemeResult<TMeme>
+function useMeme({ subreddit }: { subreddit: string }): TMemeResult<TMeme>
+function useMeme({ count }: { count: number }): TMemeResult<TMultipleMemes>
 function useMeme({
   subreddit,
   count,
